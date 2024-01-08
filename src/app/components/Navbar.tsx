@@ -11,24 +11,6 @@ const Navbar = async () => {
     const session = await getServerSession(authOptions);
 
     return (
-        // <div className='w-full px-4 py-8 bg-gray-300 flex flex-row items-center gap-4'>
-        //     <Link href='/'>Home</Link>
-        //     <Link href='/protected/dashboard'>Dashboard</Link>
-
-        //     {session && session.user?.email ? (
-        //         <>
-        //             <Link href='/auth/signout'>Sign out</Link>
-        //             <p>
-        //                 <b>Signed in as {session.user?.email}</b>
-        //             </p>
-        //         </>
-        //     ) : (
-        //         <>
-        //             <Link href='/auth/signin'>Sign in</Link>
-        //             <Link href='/auth/signup'>Sign up</Link>
-        //         </>
-        //     )}
-        // </div>
         <div className=" h-16   w-full  border-b bg-slate-100 dark:bg-slate-950">
             <div className="mx-16 my-1 flex items-center h-full w-['75%']">
                 <div className="flex items-center justify-between w-full h-full">
@@ -49,8 +31,8 @@ const Navbar = async () => {
                     ) : (
                         <>
                             <div className="flex gap-3">
-                                <Link href='/auth/signin'className={` ${buttonVariants({ variant: "outline", size: 'sm' })}`}>Sign in</Link>
-                                <Link href='/auth/signup'className={` ${buttonVariants({ variant: "outline", size: 'sm' })}`}>Sign up</Link>
+                                <Link href='/auth/signup' className={` ${buttonVariants({ variant: "outline", size: 'sm' })}`}>Sign up</Link>
+                                <Link href='/auth/signin' className={` ${buttonVariants({ variant: "outline", size: 'sm' })}`}>Sign in</Link>
                                 <ThemeToggle />
 
                             </div>
